@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Select your preferred contact method:</legend>
+        
+        <input type="radio" name="contact" id="emailRadio" value="email">
+        <label for="emailRadio">Email</label>
+        
+        <input type="radio" name="contact" id="phoneRadio" value="phone">
+        <label for="phoneRadio">Phone</label>
+        
+        <input type="radio" name="contact" id="mailRadio" value="mail">
+        <label for="mailRadio">Mail</label>
+      </fieldset>
+      <p id="radioError" style="color:red"></p>
+      
+      <button onclick="validateRadios()">Submit</button>
+      
+      <script>
+        function validateRadios() {
+          const radios = document.getElementsByName('contact');
+          const error = document.getElementById('radioError');
+          let isChecked = false;
+          
+          for (let radio of radios) {
+            if (radio.checked) {
+              isChecked = true;
+              break;
+            }
+          }
+          
+          if (!isChecked) {
+            error.textContent = "Please select a contact method";
+            return false;
+          }
+          
+          error.textContent = "";
+          return true;
+        }
+      </script>
+</body>
+</html>
