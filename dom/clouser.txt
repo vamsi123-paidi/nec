@@ -5,7 +5,7 @@ Put simply:
 
 A function inside another function can still access the outer function's variables, even after the outer function has finished running.
 
-Closures in JavaScript are extremely powerful and widely used. Here are some practical use cases of closures along with explanations:
+Closures in JavaScript are extremely powerful and widely used. Here are some  practical use cases of closures along with explanations:
 
 
 function outer() {
