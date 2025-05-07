@@ -1,0 +1,60 @@
+## 🔹 `map()`
+
+### ✅ Definition:
+
+The `map()` method creates a **new array** by applying a **function to each element** of the original array.
+
+### 🔸 Example:
+
+const numbers = [1, 2, 3, 4];
+
+const doubled = numbers.map(num => num * 2);
+
+console.log(doubled); // [2, 4, 6, 8]
+
+> Each item is transformed and stored in a new array. Original array is not changed.
+
+
+## 🔹 `filter()`
+
+### ✅ Definition:
+
+The `filter()` method creates a **new array** with **only the elements** that **pass a test** (return `true`).
+
+### 🔸 Example:
+
+const numbers = [1, 2, 3, 4, 5];
+
+const even = numbers.filter(num => num % 2 === 0);
+
+console.log(even); // [2, 4]
+
+
+> Only elements that satisfy the condition (even numbers) are kept.
+
+
+## 🔹 `reduce()`
+
+### ✅ Definition:
+
+The `reduce()` method reduces the array to a **single value** by applying a **function to each element** and accumulating the result.
+
+### 🔸 Example:
+
+const numbers = [1, 2, 3, 4];
+
+const sum = numbers.reduce((accumulator, current) => accumulator + current, 0);
+
+console.log(sum); // 10
+
+> Starts from `0` and adds each number: 0+1 → 1+2 → 3+3 → 6+4 = 10.
+
+
+## ✨ Summary:
+
+| Method     | Purpose                              | Returns   | Original Array |
+| ---------- | ------------------------------------ | --------- | -------------- |
+| `map()`    | Transform each element               | New array | Unchanged      |
+| `filter()` | Keep elements that match a condition | New array | Unchanged      |
+| `reduce()` | Condense to a single value           | One value | Unchanged      |
+
